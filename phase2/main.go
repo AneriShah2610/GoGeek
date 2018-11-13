@@ -1,6 +1,8 @@
 package main
 
-import "./calculator"
+import (
+	"./calculator"
+)
 
 func main() {
 	calculator.SelectOne()
