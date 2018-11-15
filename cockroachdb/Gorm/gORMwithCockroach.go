@@ -6,7 +6,6 @@ import (
 )
 
 type Product struct {
-	gorm.Model
 	Code  int `gorm:"primary_key"`
 	Price uint
 }
