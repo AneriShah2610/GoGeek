@@ -18,13 +18,15 @@ func GORMWithCockroach() {
 	}
 	defer db.Close()
 
-	// Migrate the schema
-	//db.CreateTable(&Product{})
+	// Create table products
+	db.CreateTable(&Product{})
 
-	// Create
-	//db.Create(&Product{Code: 001, Price: 1000})
+	// Insert 1 row in table
+	db.Create(&Product{Code: 001, Price: 1000})
 	var product Product
+	// Update table i.e. add another row
 	db.Model(&product).Update("code", 003)
 	db.Model(&product).Update("price", 2000)
+	// Use command to commit the changes
 	db.Save(&product)
 }
