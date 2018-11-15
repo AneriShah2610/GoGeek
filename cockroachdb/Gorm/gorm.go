@@ -24,7 +24,6 @@ func CockroachdbWithGorm() {
 
 	// Automatically create the "emps" table based on the Emp struct model.
 	db.AutoMigrate(&Emp{})
-
 	/*// Insert two rows into the "Emp" table.
 	db.Create(&emp{empID: 9, empName: "Pqr"})
 	db.Create(&emp{empID: 10, empName: "Lmn"})
