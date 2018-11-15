@@ -8,5 +8,6 @@ import (
 
 func main() {
 	code.BasicCockroachdbCode()
-	Gorm.CockroachdbWithGorm()
+	//Gorm.CockroachdbWithGorm()
+	Gorm.GORMWithCockroach()
 }
