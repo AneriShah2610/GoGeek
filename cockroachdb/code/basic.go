@@ -15,7 +15,7 @@ func BasicCockroachdbCode() {
 		log.Fatal("error connecting to the database: ", err)
 	}
 	// Insert into table
-	if _, err := db.Exec("insert into testing.emp1 values (5,'Anushka'),(6,'Aayush')"); err != nil {
+	if _, err := db.Exec("insert into testing.emp1 values (7,'Abc'),(8,'Xyz')"); err != nil {
 		log.Fatal(err)
 	}
 	// Print out data of emp1 table frrom testing database
