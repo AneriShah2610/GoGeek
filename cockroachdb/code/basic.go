@@ -14,10 +14,12 @@ func BasicCockroachdbCode() {
 	if err != nil {
 		log.Fatal("error connecting to the database: ", err)
 	}
+
 	// Insert into table
-	if _, err := db.Exec("insert into testing.emp1 values (7,'Abc'),(8,'Xyz')"); err != nil {
+	/*if _, err := db.Exec("insert into testing.emp1 values (7,'Abc'),(8,'Xyz')"); err != nil {
 		log.Fatal(err)
-	}
+	}*/
+
 	// Print out data of emp1 table frrom testing database
 	rows, err := db.Query("select * from testing.emp1")
 	if err != nil {
@@ -26,11 +28,11 @@ func BasicCockroachdbCode() {
 	defer rows.Close()
 	fmt.Println("Details about employee 1 table")
 	for rows.Next() {
-		var emp_id int
-		var emp_name string
-		if err := rows.Scan(&emp_id, &emp_name); err != nil {
+		var empid int      // column1 in emp1 table
+		var empname string //column2 in emp1 table
+		if err := rows.Scan(&empid, &empname); err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(emp_id, emp_name)
+		fmt.Println(empid, empname)
 	}
 }
