@@ -6,13 +6,17 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// Code,Gorm are subpackgaes of cocckroachdb directory
+
 func main() {
-	// Code is a subpackga eof cocckroach db and it has a simple cockroachdb example with go
+	// code contains simple cockroachdb example with go
 	code.BasicCockroachdbCode()
-	//Gorm is a subpackga eof cocckroach db and it use GORM+Go+Cockroachdb and db.AutoMigrate method to auto create table
+	// code is done using GORM+Go+Cockroachdb and db.AutoMigrate method to auto create table
 	Gorm.CockroachdbWithGorm()
-	//Gorm is a subpackga eof cocckroach db and it use GORM+Go+Cockroachdb and db.CreateTable method to create table
+	// code is done using GORM+Go+Cockroachdb and db.CreateTable method to create table
 	Gorm.GORMWithCockroach()
-	//Code is a subpackga eof cocckroach db and this code has different function for different functionalities
+	// this code has different function for different functionalities
 	code.Cockroachdb()
+	// // code contains the features like Go+Cockroachdb+postgresql_driver+function+struct
+	code.CockroachDbwithStruct()
 }
