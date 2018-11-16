@@ -19,7 +19,7 @@ func main() {
 	// this code has different function for different functionalities
 	code.Cockroachdb()
 	// code contains the features like Go+Cockroachdb+postgresql_driver+function+struct
-	/code.CockroachDbwithStruct()
+	code.CockroachDbwithStruct()
 	// code contains the features like Go+Cockroachdb+postgresql_driver+function with update function
 	code.UpdateDataFunc()
 	//All cockroachdb operation 
