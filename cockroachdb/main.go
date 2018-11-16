@@ -22,6 +22,6 @@ func main() {
 	code.CockroachDbwithStruct()
 	// code contains the features like Go+Cockroachdb+postgresql_driver+function with update function
 	code.UpdateDataFunc()
-	//All cockroachdb operation 
+	//All cockroachdb operation
 	cockroachdbfullcode.DbConnectionCreate()
 }
