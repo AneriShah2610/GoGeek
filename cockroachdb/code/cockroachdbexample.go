@@ -8,21 +8,18 @@ import (
 
 func Cockroachdb() {
 	// create database connection
-	db := dbConnection()
-	// Create tabel
-	createTable(db)
-	//function to insert data in account table
-	insertData(db)
+	dbConnection()
 }
 
 // function connect the database
-func dbConnection() *sql.DB {
+func dbConnection() {
 	connectString := "postgresql://root@localhost:26257/testing?sslmode=disable"
 	db, err := sql.Open("postgres", connectString)
 	if err != nil {
 		log.Fatal("Error while connecting database", err)
 	}
-	return db
+	// Create tabel
+	createTable(db)
 }
 
 // function to create table if it not existes in database
@@ -30,11 +27,13 @@ func createTable(db *sql.DB) {
 	if _, err := db.Exec("CREATE TABLE IF NOT EXISTS accounts(id integer primary key,balance integer)"); err != nil {
 		log.Fatal("Error while creating table", err)
 	}
+	//function to insert data in account table
+	insertData(db)
 }
 
 // insert data into table
 func insertData(db *sql.DB) {
-	if _, err := db.Exec("INSERT INTO accounts VALUES (103,3000),(104,4000)"); err != nil {
+	if _, err := db.Exec("INSERT INTO accounts VALUES (105,5000),(106,6000)"); err != nil {
 		log.Fatal(err)
 	}
 	printData(db)
