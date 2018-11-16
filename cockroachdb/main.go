@@ -13,4 +13,6 @@ func main() {
 	Gorm.CockroachdbWithGorm()
 	//Gorm is a subpackga eof cocckroach db and it use GORM+Go+Cockroachdb and db.CreateTable method to create table
 	Gorm.GORMWithCockroach()
+	//Code is a subpackga eof cocckroach db and this code has different function for different functionalities
+	code.Cockroachdb()
 }
