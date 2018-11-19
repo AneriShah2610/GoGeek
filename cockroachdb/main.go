@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/AneriShah2610/GoGeek/cockroachdb/Gorm"
 	"github.com/AneriShah2610/GoGeek/cockroachdb/cockroachdbfullcode"
+	"github.com/AneriShah2610/GoGeek/cockroachdb/json"
 	"github.com/AneriShah2610/GoGeek/cockroachdb/code"
 	_ "github.com/lib/pq"
 )
@@ -24,4 +25,5 @@ func main() {
 	code.UpdateDataFunc()
 	//All cockroachdb operation
 	cockroachdbfullcode.DbConnectionCreate()
+	json.CockroachJson()
 }
