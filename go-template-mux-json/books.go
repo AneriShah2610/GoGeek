@@ -11,7 +11,7 @@ func booksHandler(w http.ResponseWriter, r *http.Request) {
 	bookData := &BookData{
 		LoadBooks("books.json"),
 	}
-	templates := template.Must(template.ParseFiles("server/books/index.html"))
+	templates := template.Must(template.ParseFiles("server/books/index.html")) //It parse index.html file
 	err := templates.Execute(w, bookData)
 	if err != nil {
 		log.Fatal(err)

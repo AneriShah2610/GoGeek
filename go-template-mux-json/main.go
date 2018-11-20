@@ -31,7 +31,7 @@ func main() {
 
 	// Init router
 	router := mux.NewRouter()
-	router.HandleFunc("/books/", booksHandler)
+	router.HandleFunc("/books/", booksHandler) // call books.go page
 	router.Handle("/", http.FileServer(http.Dir("client")))
 	log.Fatal("Error while routing handlefunction", http.ListenAndServe(":8000", router))
 }
