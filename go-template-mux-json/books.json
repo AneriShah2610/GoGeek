@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "isbn":"aa-25-fgf-25",
+        "author":"Go Action",
+        "title":"Dav Chaney",
+        "pubdate":"11/7/1933",
+        "price":252.50
+    },
+    {
+        "id" : 2,
+        "isbn":"bb-54-frr-58",
+        "author":"Go Module",
+        "title":"Dav Chaney",
+        "pubdate":"11/7/2018",
+        "price":547.54
+    },
+    {
+        "id" : 3,
+        "isbn":"cc-58-gds-54",
+        "author":"Go PipleLine",
+        "title":"Rob",
+        "pubdate":"08/08/2011",
+        "price":547.54
+    },
+    {
+        "id" : 4,
+        "isbn":"dd-74-fgvfh-55",
+        "author":"Go Pattern",
+        "title":"Rob pike",
+        "pubdate":"12/7/2011",
+        "price":547.54
+    }
+    ]

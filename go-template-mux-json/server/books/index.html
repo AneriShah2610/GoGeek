@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="UTF-8"/>
+            <title>Simple Web App using Go + Mux + Tamplate + json</title>
+    </head>
+    <body onload="OnLoad();">
+        <h2 align="center">A simple web application using Go + Mux + Template + Json</h2>
+            <div id="head" align="center">
+                    <h3>Books Data </h3>
+            </div>
+            <div id="main" align="center">
+                Total books: {{len .BookListing}}
+                <hr/>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>ISBN</td>
+                            <td>AUTHOR</td>
+                            <td>TITLE</td>
+                            <td>PUBLICATION DATE</td>
+                            <td>PRICE</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range.BookListing}}
+                        <tr>
+                            <td>{{.ID}}</td>
+                            <td>{{.Isbn}}</td>
+                            <td>{{.Author}}</td>
+                            <td>{{.Title}}</td>
+                            <td>{{.PubliationDate}}</td>
+                            <td>{{.Price}}</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+            <script src = "/js/main.js"></script>
+    </body>
+</html>
