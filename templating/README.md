@@ -1,3 +1,6 @@
+Structure of this example 
+
+
 templating
     |-main.go
     |-indexhtml.go 
@@ -7,3 +10,4 @@ templating
         |-main.hmtl
         |-about.html
         |-conatcat.html
+        
