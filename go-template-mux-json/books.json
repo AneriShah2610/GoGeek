@@ -30,5 +30,13 @@
         "title":"Rob pike",
         "pubdate":"12/7/2011",
         "price":547.54
+    },
+    {
+        "id" : 5,
+        "isbn":"fff-74-fefwe-55",
+        "author":"Go Athens",
+        "title":"Rob pike",
+        "pubdate":"30/08/2018",
+        "price":500.50
     }
     ]

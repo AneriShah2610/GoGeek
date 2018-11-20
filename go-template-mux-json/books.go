@@ -9,7 +9,7 @@ import (
 func booksHandler(w http.ResponseWriter, r *http.Request) {
 	// Read book data from book.json
 	bookData := &BookData{
-		laodBooks("books.json"),
+		LoadBooks("books.json"),
 	}
 	templates := template.Must(template.ParseFiles("server/books/index.html"))
 	err := templates.Execute(w, bookData)

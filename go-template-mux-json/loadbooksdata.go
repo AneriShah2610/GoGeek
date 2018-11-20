@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-func laodBooks(fn string) []Book {
+func LoadBooks(fn string) []Book {
 	// craete a variable of Book Struct
 	var books []Book
 
