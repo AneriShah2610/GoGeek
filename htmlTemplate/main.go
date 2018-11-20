@@ -14,10 +14,10 @@ func main() {
 
 	// Init router
 	router := mux.NewRouter()
-	router.HandleFunc("/hello", helloHandler).Methods("GET")
+	router.HandleFunc("/", helloGetHandler).Methods("GET")
 	http.Handle("/", router)
 	http.ListenAndServe(":8000", nil)
 }
-func helloHandler(w http.ResponseWriter, r *http.Request) {
+func helloGetHandler(w http.ResponseWriter, r *http.Request) {
 	templates.ExecuteTemplate(w, "index.html", nil)
 }
