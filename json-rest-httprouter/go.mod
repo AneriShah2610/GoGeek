@@ -1,4 +1,4 @@
-module github.com/AneriShah2610/GoGeek/json-rest-mux
+module github.com/AneriShah2610/GoGeek/json-rest-httpRouter
 
 require (
 	github.com/gorilla/mux v1.6.2
