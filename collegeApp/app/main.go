@@ -12,5 +12,7 @@ func main() {
 	router := mux.NewRouter()
 	router.Use(api.MiddleWareHandler)
 	router.HandleFunc("/college", api.ShowColleges).Methods("GET")
+	router.HandleFunc("/college/{id}", api.ShowCollege).Methods("GET")
+	router.HandleFunc("/college/insert", api.CreateCollege).Methods("GET")
 	log.Fatal("error while routing", http.ListenAndServe(":8000", router))
 }
