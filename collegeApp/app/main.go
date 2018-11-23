@@ -13,6 +13,6 @@ func main() {
 	router.Use(api.MiddleWareHandler)
 	router.HandleFunc("/college", api.ShowColleges).Methods("GET")
 	router.HandleFunc("/college/{id}", api.ShowCollege).Methods("GET")
-	router.HandleFunc("/college/insert", api.CreateCollege).Methods("GET")
+	router.HandleFunc("/college/insert", api.CreateCollege).Methods("POST")
 	log.Fatal("error while routing", http.ListenAndServe(":8000", router))
 }

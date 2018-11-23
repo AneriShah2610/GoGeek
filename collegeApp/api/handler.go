@@ -69,7 +69,7 @@ func CreateCollege(writer http.ResponseWriter, request *http.Request) {
 	var college model.College
 	_ = json.NewDecoder(request.Body).Decode(&college)
 	crConn := ctxt.Value("crConn").(*database.DbConnection)
-	if _, err := crConn.DbConn.Exec("INSERT INTO testing.college Values ($1,$2,$3)", college.ID, college.Name, college.Address); err != nil {
+	if _, err := crConn.DbConn.Exec("INSERT INTO testing.college VALUES ($1,$2,$3)", college.ID, college.Name, college.Address); err != nil {
 		log.Fatal("Error while inserting college data into table", err)
 	}
 	fmt.Fprintf(writer, `data inserted successfully`)
