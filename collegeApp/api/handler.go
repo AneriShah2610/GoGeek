@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"log"
 	"net/http"
-	"strconv"
 
 	"github.com/AneriShah2610/GoGeek/collegeApp/database"
 	"github.com/AneriShah2610/GoGeek/collegeApp/model"
@@ -48,20 +47,14 @@ func ShowColleges(writer http.ResponseWriter, request *http.Request) {
 
 // ShowCollege to retrieve particular college data
 func ShowCollege(writer http.ResponseWriter, request *http.Request) {
-	var college []model.College
+	//var college model.College
 	crConn := ctxt.Value("crConn").(*database.DbConnection)
 	params := mux.Vars(request)
-	for _, item := range college {
-		if strconv.Itoa(item.ID) == params["id"] {
-			row, err := crConn.DbConn.Query("SELECT *from college WHERE id-> $1", item.ID)
-			if err != nil {
-				log.Fatal("Error while retrieving single data", err)
-			}
-			json.NewEncoder(writer).Encode(row)
-			return
-		}
+	row, err := crConn.DbConn.Query("SELECT *from college WHERE id = $1", params["id"])
+	if err != nil {
+		log.Fatal("Error while retrieving single data", err)
 	}
-	json.NewEncoder(writer).Encode(&model.College{})
+	json.NewEncoder(writer).Encode(row)
 }
 
 // CreateCollege to inert new college data in college table
